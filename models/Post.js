@@ -1,8 +1,11 @@
+// Import dependencies/files
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
+// Set up relationships
 class Post extends Model {}
 
+// Set up table
 Post.init(
   {
     id: {
@@ -37,4 +40,5 @@ Post.init(
   }
 );
 
+// Export module
 module.exports = Post;

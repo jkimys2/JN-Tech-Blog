@@ -1,13 +1,16 @@
+// Import dependencies/files
 const { Model, DataTypes } = require("sequelize");
 const bcrypt = require("bcrypt");
 const sequelize = require("../config/connection");
 
+// Set up relationships/check to make sure password matches what the user typed in
 class User extends Model {
   checkPassword(loginPw) {
     return bcrypt.compareSync(loginPw, this.password);
   }
 }
 
+// Set up table
 User.init(
   {
     id: {
@@ -35,6 +38,7 @@ User.init(
     },
   },
   {
+    // Hash the password
     hooks: {
       beforeCreate: async (newUserData) => {
         newUserData.password = await bcrypt.hash(newUserData.password, 10);
@@ -53,4 +57,5 @@ User.init(
   }
 );
 
+// Export module
 module.exports = User;
