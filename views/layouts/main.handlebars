@@ -18,25 +18,11 @@
     <link rel="stylesheet" href="/public/css/style.css" />
   </head>
   <body>
-    <nav class="navbar bg-body-tertiary">
-      <div class="container">
-        <div>
-          <a class="nav-item nav-link" href="/"><i
-              class="bi bi-house"
-            ></i>Home</a>
-          <a class="nav-item nav-link" href="/dashboard"><i
-              class="bi bi-card-list"
-            ></i>Dashboard</a>
-          {{#if loggedIn}}
-            <a class="nav-item nav-link" href="/login" id="logout"><i
-                class="bi bi-box-arrow-right"
-              ></i>Logout</a>
-          {{else}}
-            <a class="nav-item nav-link" href="/login"><i
-                class="bi bi-box-arrow-in-right"
-              ></i>Login</a>
-          {{/if}}
-        </div>
+    <nav class="navbar bg-primary">
+      <div class="container-fluid justify-content-start">
+        <a class="nav-link" href="/">Home</a>
+
+        <a class="nav-link" href="/dashboard">Dashboard</a>
       </div>
     </nav>
 
