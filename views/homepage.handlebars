@@ -1,0 +1,5 @@
+<div>
+  {{#each post as |post|}}
+    <p>Created by {{post.user.name}} on {{format_date post.date_created}}</p>
+  {{/each}}
+</div>
