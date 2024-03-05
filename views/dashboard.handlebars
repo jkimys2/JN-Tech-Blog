@@ -2,7 +2,10 @@
 <section>
     <div>
         <h2>Welcome, {{name}}!</h2>
-        {{#each posts as |post|}}
     </div>
-    
+    {{#each posts as |post|}}
+    <button type="button" class="btn btn-danger">Delete Post!</button>
+    {{/each}}
 </section>
+
+<script src="../public/js/deletepost.js"></script>
